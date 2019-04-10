@@ -1708,6 +1708,14 @@ describe('snowflake.createConnection() CLIENT_SESSION_KEEP_ALIVE', function ()
           assert.equal(1800, connection.getClientSessionKeepAliveHeartbeatFrequency());
           callback();
         },
+        function (callback)
+        {
+          connection.destroy(function (err)
+          {
+            assert.ok(!err, JSON.stringify(err));
+            callback();
+          });
+        }
       ],
       done)
   });
