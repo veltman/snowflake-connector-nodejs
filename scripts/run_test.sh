@@ -18,7 +18,7 @@ else
     npm install npm@latest -g
     npm install --package-lock-only
     MOCHA_CMD=(
-        "./node_modules/.bin/istanbul" "cover" "./node_modules/.bin/_mocha" "--"
+        "./node_modules/.bin/_mocha" "--"
         "--timeout" "$TEST_TIMEOUT"
     )
 fi
